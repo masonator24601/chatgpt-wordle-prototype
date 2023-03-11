@@ -8,6 +8,9 @@ chatgptwordle/backend/__pycache__/
 chatgptwordle/chatgptwordle/__pycache__/
 chatgptwordle/chatgptwordle/migrations/__pycache__/
 chatgptwordle/db.sqlite3
+chatgptwordle.egg-info/
+build/
+dist/
 
 # FRONTEND
 
