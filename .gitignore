@@ -14,23 +14,23 @@ dist/
 
 # FRONTEND
 
-chatgptwordle/chatgptwordle/frontend/node_modules
-chatgptwordle/chatgptwordle/frontend/.pnp
-chatgptwordle/chatgptwordle/frontend/.pnp.js
+chatgptwordle/frontend/node_modules
+chatgptwordle/frontend/.pnp
+chatgptwordle/frontend/.pnp.js
 
 # testing
-chatgptwordle/chatgptwordle/frontend/coverage
+chatgptwordle/frontend/coverage
 
 # production
-chatgptwordle/chatgptwordle/frontend/build
+chatgptwordle/frontend/build
 
 # misc
-chatgptwordle/chatgptwordle/frontend/.DS_Store
-chatgptwordle/chatgptwordle/frontend/.env.local
-chatgptwordle/chatgptwordle/frontend/.env.development.local
-chatgptwordle/chatgptwordle/frontend/.env.test.local
-chatgptwordle/chatgptwordle/frontend/.env.production.local
+chatgptwordle/frontend/.DS_Store
+chatgptwordle/frontend/.env.local
+chatgptwordle/frontend/.env.development.local
+chatgptwordle/frontend/.env.test.local
+chatgptwordle/frontend/.env.production.local
 
-chatgptwordle/chatgptwordle/frontend/npm-debug.log*
-chatgptwordle/chatgptwordle/frontend/yarn-debug.log*
-chatgptwordle/chatgptwordle/frontend/yarn-error.log*
+chatgptwordle/frontend/npm-debug.log*
+chatgptwordle/frontend/yarn-debug.log*
+chatgptwordle/frontend/yarn-error.log*

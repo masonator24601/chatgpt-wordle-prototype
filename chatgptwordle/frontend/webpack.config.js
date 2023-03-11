@@ -12,14 +12,14 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['*', '.js']
+    extensions: ['*', '.js', '.jsx'],
+    modules: [
+        path.resolve(__dirname, 'node_modules'),
+        path.resolve(__dirname, 'src')
+    ]
   },
   output: {
-    path: path.resolve(__dirname, 'static'),
+    path: path.resolve(__dirname, '../chatgptwordle/static'),
     filename: 'index.js',
-  },
-  devServer: {
-    static: path.resolve(__dirname, 'static'),
-    filename: 'index.js'
-  },
+  }
 };
