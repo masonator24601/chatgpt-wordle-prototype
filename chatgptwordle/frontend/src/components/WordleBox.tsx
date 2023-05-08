@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Wordle = () => {
+export const WordleBox = () => {
     return (
         <React.Fragment>
             Wordle

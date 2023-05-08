@@ -10,14 +10,13 @@ export const Main = () => {
 
     const [response, setResponse] = useState<MainState | undefined>(undefined);
 
-  useEffect(() => {
-
-    getResponses().then(
-        (responses: MainState) => {
-            setResponse(responses['data'][0]);
-        }
-    )
-  }, []);
+    useEffect(() => {
+        getResponses().then(
+            (responses: MainState) => {
+                setResponse(responses['data'][0]);
+            }
+        )
+    }, []);
 
     return (
         <React.Fragment>
