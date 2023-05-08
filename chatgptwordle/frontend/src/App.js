@@ -1,8 +1,8 @@
+import { Main } from './components/Main';
+
 function App() {
   return (
-    <div>
-        This is some react app
-    </div>
+    <Main />
   );
 }
 
