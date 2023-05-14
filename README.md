@@ -10,3 +10,8 @@ Go to your terminal and do `git remote -v`
 
 cd venv/Scripts ; .\activate ; cd ../..
 cd venv/Scripts ; deactivate ; cd ../..
+
+# Links
+
+Github link: https://github.com/masonator24601/chatgpt-wordle-prototype
+Original wordle: https://www.nytimes.com/games/wordle/index.html
