@@ -3,7 +3,7 @@ import { getResponses } from './Api';
 import { Game } from './Game';
 import CircularProgress from '@mui/material/CircularProgress';
 import Typography from '@mui/material/Typography';
-import { FlexBox } from './StyledComponents';
+import { CenterBox } from './StyledComponents';
 import { MainState } from './Interfaces';
 
 export const Main = () => {
@@ -26,7 +26,7 @@ export const Main = () => {
                     <Game gameData={response}/>
                 </Typography> :
                 <React.Fragment>
-                    <FlexBox><Typography variant="body1" gutterBottom>Loading..  </Typography><CircularProgress /></FlexBox>
+                    <CenterBox><Typography variant="body1" gutterBottom>Loading...</Typography><CircularProgress /></CenterBox>
                 </React.Fragment>
             }
         </React.Fragment>
