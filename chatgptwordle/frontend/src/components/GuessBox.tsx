@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import { CenterBox } from './StyledComponents';
 
 interface GuessBoxProps {
     validationError: string,
@@ -26,25 +27,27 @@ export const GuessBox = ({validationError, onGuessClick, disabled}: GuessBoxProp
 
     return (
         <React.Fragment>
-            <TextField
-                error ={error}
-                value={value}
-                name="guess"
-                helperText={error ? validationError : null}
-                onChange={onChange}
-                onKeyPress={onKeyPress}
-                InputProps={{
-                    endAdornment: (
-                        <Button
-                            variant="contained"
-                            onClick={() => onGuessClick(value)}
-                            disabled={disabled}
-                        >
-                            GUESS
-                        </Button>
-                    )
-              }}
-            />
+            <CenterBox>
+                <TextField
+                    error ={error}
+                    value={value}
+                    name="guess"
+                    helperText={error ? validationError : null}
+                    onChange={onChange}
+                    onKeyPress={onKeyPress}
+                    InputProps={{
+                        endAdornment: (
+                            <Button
+                                variant="contained"
+                                onClick={() => onGuessClick(value)}
+                                disabled={disabled}
+                            >
+                                GUESS
+                            </Button>
+                        )
+                  }}
+                />
+            </CenterBox>
         </React.Fragment>
     )
 }

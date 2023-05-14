@@ -1,18 +1,14 @@
 import React, {useState, useEffect} from 'react';
-import Response from './Interfaces';
+import { Response, ValidGuess } from './Interfaces';
 import { Instructions } from './Instructions';
 import { StoryBox } from './StoryBox';
 import { WordleBox } from './WordleBox';
 import { GuessBox } from './GuessBox';
-import { WinDialog, LoseDialog } from './EndDialogs';
+import { LoseBox } from './LoseBox';
+import { WinBox } from './WinBox';
 
 interface GameProps {
     gameData: Response
-}
-
-interface ValidGuess {
-    guessNumber: number,
-    guess: string
 }
 
 type ValidGuesses = Array<ValidGuess>;
@@ -68,18 +64,18 @@ export const Game = ({ gameData } : Response) => {
 
         guess = guess.toLowerCase();
 
-        if (guess === gameData['word']) {
-            setPlayerWin(true);
-            setWinDialogOpen(true);
-            setDisabled(true);
-            return;
-        }
-
         const isValidGuess = validateGuess(guess);
 
         if (isValidGuess) {
             setValidGuesses([...validGuesses, {guessNumber, guess}]);
             setGuessNumber(guessNumber + 1);
+        }
+
+        if (guess === gameData['word']) {
+            setPlayerWin(true);
+            setWinDialogOpen(true);
+            setDisabled(true);
+            return;
         }
 
         if (guessNumber >= guessLimit) {
@@ -100,23 +96,26 @@ export const Game = ({ gameData } : Response) => {
             <StoryBox
                 content={gameData['content']}
                 guessNumber={guessNumber}
-                word={gameData['word']}
+                correctWord={gameData['word']}
+                gameOver={playerWin || playerLose}
             />
-{/*             <WordleBox /> */}
+            <WordleBox
+                validGuesses={validGuesses}
+                guessLimit={guessLimit}
+                correctWord={gameData['word']}
+            />
             <GuessBox
                 validationError={validationError}
                 onGuessClick={onGuessClick}
                 disabled={disabled}
             />
             {
-                playerWin ?
-                <WinDialog open={winDialogOpen} toggleOpen={toggleWinDialogOpen} /> :
-                null
+                playerLose ? <LoseBox
+                    correctWord={gameData['word']}
+                /> : null
             }
             {
-                playerLose ?
-                <LoseDialog open={loseDialogOpen} toggleOpen={toggleLoseDialogOpen} /> :
-                null
+                playerWin ? <WinBox/> : null
             }
         </React.Fragment>
     )

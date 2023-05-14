@@ -36,11 +36,32 @@ export const Instructions = ({ open, toggleOpen }: InstructionsProps)  => {
         <DialogTitle>{Instructions}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-slide-description">
-            Here are some instructions on how to play the game.
+            Welcome to Wordle with ChatGPT!
+            <br/>
+            <br/>
+            The beloved AI has been told to come up with a fantastical story about a particular five letter word.
+            While the story is surely fascinating and deeply philosophical, the AI has removed the word in question from the story.
+            Can you guess what the story is about?
+            <br/>
+            <br/>
+            Rules:
+            <br/>
+            <br/>
+            • You have four tries to guess the word.
+            <br/>
+            • Yellow box means that letter is in the word, but not the right position.
+            <br/>
+            • Green box means that letter is in the word AND in the right position.
+            <br/>
+            <br/>
+            Refresh the page to reset or play again.
+            <br/>
+            <br/>
+            Hope you enjoy!
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={toggleOpen}>Cool</Button>
+          <Button onClick={toggleOpen}>OK</Button>
         </DialogActions>
       </Dialog>
     </div>
