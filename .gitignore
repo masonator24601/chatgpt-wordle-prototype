@@ -1,0 +1,36 @@
+# PYCHARM
+.idea
+.git
+venv
+
+# BACKEND
+chatgptwordle/backend/__pycache__/
+chatgptwordle/chatgptwordle/__pycache__/
+chatgptwordle/chatgptwordle/migrations/__pycache__/
+chatgptwordle/db.sqlite3
+chatgptwordle.egg-info/
+build/
+dist/
+
+# FRONTEND
+
+chatgptwordle/frontend/node_modules
+chatgptwordle/frontend/.pnp
+chatgptwordle/frontend/.pnp.js
+
+# testing
+chatgptwordle/frontend/coverage
+
+# production
+chatgptwordle/frontend/build
+
+# misc
+chatgptwordle/frontend/.DS_Store
+chatgptwordle/frontend/.env.local
+chatgptwordle/frontend/.env.development.local
+chatgptwordle/frontend/.env.test.local
+chatgptwordle/frontend/.env.production.local
+
+chatgptwordle/frontend/npm-debug.log*
+chatgptwordle/frontend/yarn-debug.log*
+chatgptwordle/frontend/yarn-error.log*
